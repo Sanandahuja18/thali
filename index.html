@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Selection</title>
+
+</head>
+
+<body>
+    <center>
+
+        <div class="header"></div>
+
+        <form class="form">
+            <label class="title">Login </label>
+            <p class="message">Login to get access to your kitchen </p>
+
+            <label>
+                <input id="Username" required="" placeholder="" type="text" class="input">
+                <span>Username</span>
+            </label>
+
+            <label>
+                <input id="password" required="" placeholder="" type="password" class="input">
+                <span>Password</span>
+            </label>
+
+            <button class="submit"><a href=NewDashboardDesign.html>Login</a></button>
+            <p class="signup">Don't have an acount ? <a href="NewSignupDesign.html">Signup</a> </p>
+        </form>
+
+        <style>
+            .header{
+                width: auto;
+                padding-bottom: 40px;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                max-width: 350px;
+                background-color: #ffffff;
+                padding: 20px 40px 20px 20px;
+                border-radius: 20px;
+                box-shadow: 4px 4px 4px 4px grey;
+                position: relative;
+            }
+
+            .title {
+                font-size: 28px;
+                color: royalblue;
+                font-weight: 600;
+                letter-spacing: -1px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-top: 20px;
+                padding-left: 30px;
+                padding-bottom: 10px;
+            }
+
+            .title::before,
+            .title::after {
+                position: absolute;
+                content: "";
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                left: 0px;
+                background-color: royalblue;
+            }
+
+            .title::before {
+                width: 18px;
+                height: 18px;
+                background-color: royalblue;
+            }
+
+            .title::after {
+                width: 18px;
+                height: 18px;
+                animation: pulse 1s linear infinite;
+            }
+
+            .message,
+            .signup {
+                color: rgba(88, 87, 87, 0.822);
+                font-size: 16px;
+            }
+
+            .signup {
+                text-align: center;
+            }
+
+            .signup a {
+                color: royalblue;
+            }
+
+            .signup a:hover {
+                text-decoration: underline royalblue;
+            }
+
+
+            .form label {
+                position: relative;
+            }
+
+            .form label .input {
+                width: 100%;
+                padding: 10px 10px 20px 10px;
+                outline: 0;
+                border: 1px solid rgba(105, 105, 105, 0.397);
+                border-radius: 10px;
+            }
+
+            .form label .input+span {
+                position: absolute;
+                left: 10px;
+                top: 15px;
+                color: grey;
+                font-size: 0.9em;
+                cursor: text;
+                transition: 0.3s ease;
+            }
+
+            .form label .input:placeholder-shown+span {
+                top: 15px;
+                font-size: 0.9em;
+            }
+
+            .form label .input:focus+span,
+            .form label .input:valid+span {
+                top: 30px;
+                font-size: 0.7em;
+                font-weight: 600;
+            }
+
+            .form label .input:valid+span {
+                color: green;
+            }
+
+            .submit {
+                border: none;
+                outline: none;
+                background-color: royalblue;
+                width: 106%;
+                padding: 10px;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 16px;
+                transform: .3s ease;
+            }
+
+            .submit:hover {
+                background-color: rgb(56, 90, 194);
+            }
+
+            @keyframes pulse {
+                from {
+                    transform: scale(0.9);
+                    opacity: 1;
+                }
+
+                to {
+                    transform: scale(1.8);
+                    opacity: 0;
+                }
+            }
+        </style>
+</body>
+
+</html>
