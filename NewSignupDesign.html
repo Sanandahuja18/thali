@@ -18,26 +18,41 @@
             <p class="message">Signup now and get full access to our app. </p>
 
             <label>
-                <input id="Username" required="" placeholder="" type="text" class="input">
+                <input id="newUsername" required="" placeholder="" type="text" class="input">
                 <span>Username</span>
             </label>
 
             <label>
-                <input id="email" required="" placeholder="" type="email" class="input">
+                <input id="newemail" required="" placeholder="" type="email" class="input">
                 <span>Email</span>
             </label>
 
             <label>
-                <input id="password" required="" placeholder="" type="password" class="input">
+                <input id="newpassword" required="" placeholder="" type="password" class="input">
                 <span>Password</span>
             </label>
             <label>
                 <input id="confirm_password" required="" placeholder="" type="password" class="input">
                 <span>Confirm password</span>
             </label>
-            <button class="submit">Submit</button>
+            <button class="submit" onclick="registeruser()">Register</button>
             <p class="signin">Already have an acount ? <a href="index.html">Signin</a> </p>
         </form>
+
+        <script>
+            const API_URL = 'https://script.google.com/macros/s/AKfycbzbDibWaFGIrCJinlSoSO-XF1V7MvrL9Txvtp27_vzV0lPCryzpYm_gMuWEGGglBmVr/exec';
+
+            function registeruser() {
+                const username = document.getElementById('newUsername').value;
+                const password = document.getElementById('newPassword').value;
+                const email = document.getElementById('newEmail').value;
+
+                const url = `${API_URL}?username=${username}&password=${password}&email=${email}&action=registerUser`;
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => alert(data));
+            }
+        </script>
 
         <style>
             .header{
